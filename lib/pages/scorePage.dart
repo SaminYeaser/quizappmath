@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+
 import 'package:get/get.dart';
 import 'package:quizappmath/constants.dart';
 import 'package:quizappmath/controllers/questionController.dart';
 import 'package:quizappmath/models/quiz.dart';
-import 'package:quizappmath/pages/components/questions.dart';
+
 import 'package:quizappmath/pages/myhomepage.dart';
 import 'package:websafe_svg/websafe_svg.dart';
 
@@ -45,7 +46,14 @@ class ScorePage extends StatelessWidget {
                 ElevatedButton(
                   onPressed: () => Get.to(MyHomePage()),
                   child: Container(
-                    child: Text('Back to Home'),
+                    child: Text('< Back to Home',style: TextStyle(color: Colors.black),),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    primary: buttonColor,
+                    fixedSize: Size(200, 50),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(50),
+                    ),
                   ),
                 ),
                 Spacer(flex: 3,),

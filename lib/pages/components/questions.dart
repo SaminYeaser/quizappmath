@@ -91,16 +91,16 @@ class _QuestionsState extends State<Questions> {
                 })
           ]),
           style: TeXViewStyle(
-            margin: TeXViewMargin.all(5),
+            margin: TeXViewMargin.all(0),
             padding: TeXViewPadding.all(10),
-            borderRadius: TeXViewBorderRadius.all(10),
+            borderRadius: TeXViewBorderRadius.all(0),
             border: TeXViewBorder.all(
               TeXViewBorderDecoration(
-                  borderColor: Colors.blue,
+                  borderColor: Colors.blueGrey,
                   borderStyle: TeXViewBorderStyle.Solid,
                   borderWidth: 5),
             ),
-            backgroundColor: Colors.white,
+            backgroundColor: Colors.transparent,
           ),
         ),
         if (isWrong)
@@ -109,9 +109,15 @@ class _QuestionsState extends State<Questions> {
             child: Text(
               "Wrong answer!!! Please choose a correct option.",
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 18, color: Colors.red),
+              style: TextStyle(
+                fontSize: 18,
+                color: Colors.red,
+              ),
             ),
           ),
+        SizedBox(
+          height: 20,
+        ),
         Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisSize: MainAxisSize.max,
@@ -127,6 +133,13 @@ class _QuestionsState extends State<Questions> {
                 });
               },
               child: Text("Previous"),
+              style: ElevatedButton.styleFrom(
+                primary: buttonColor,
+                fixedSize: Size(100, 50),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(50),
+                ),
+              ),
             ),
             ElevatedButton(
               onPressed: () {
@@ -154,6 +167,13 @@ class _QuestionsState extends State<Questions> {
                 });
               },
               child: Text("Next"),
+              style: ElevatedButton.styleFrom(
+                primary: buttonColor,
+                fixedSize: Size(100, 50),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(50),
+                ),
+              ),
             ),
           ],
         )

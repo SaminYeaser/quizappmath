@@ -1,3 +1,4 @@
+
 class Quiz {
   final String? statement;
   final List<QuizOption>? options;
@@ -17,6 +18,7 @@ class QuestionAnswer {
    static int numOfCorrectAnswer = 0;
 
 }
+
 
 List<Quiz> quizList = [
   Quiz(

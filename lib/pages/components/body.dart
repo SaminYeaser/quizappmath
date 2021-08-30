@@ -42,6 +42,13 @@ class Body extends StatelessWidget {
                     child: Container(
                       child: Text('Stop'),
                     ),
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.red,
+                      fixedSize: Size(100, 50),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(50),
+                      ),
+                    ),
                   )
                 ],
               ),

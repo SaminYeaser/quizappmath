@@ -28,11 +28,11 @@ class MyHomePage extends StatelessWidget {
                 children: [
                   Spacer(flex: 2,),
                   Text(
-                    "Solve these math quiz",
+                    "Solve this math quiz",
                     style: Theme.of(context).textTheme.headline4!.copyWith(
                         color: Colors.white, fontWeight: FontWeight.bold),
                   ),
-                  Text("Enter your informations bellow"),
+                  Text("Enter your name bellow"),
                   Spacer(),
                   TextField(
                     decoration: InputDecoration(
@@ -53,12 +53,14 @@ class MyHomePage extends StatelessWidget {
                       decoration: BoxDecoration(
                           gradient: kPrimaryGradient,
                           borderRadius: BorderRadius.all(Radius.circular(12))),
-                      child: Text(
-                        "Lets start the Quiz",
-                        style: Theme.of(context)
-                            .textTheme
-                            .button!
-                            .copyWith(color: Colors.black),
+                      child: Center(
+                        child: Text(
+                          "Lets start the Quiz",
+                          style: Theme.of(context)
+                              .textTheme
+                              .button!
+                              .copyWith(color: Colors.black),
+                        ),
                       ),
                     ),
                   ),
