@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:quizappmath/constants.dart';
+import 'package:quizappmath/pages/components/body.dart';
 import 'package:websafe_svg/websafe_svg.dart';
+
+import 'components/questions.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({Key? key}) : super(key: key);
@@ -42,7 +46,7 @@ class MyHomePage extends StatelessWidget {
                   ),
                   Spacer(),
                   InkWell(
-                    onTap: (){},
+                    onTap: ()=>Get.to(Body()),
                     child: Container(
                       width: double.infinity,
                       padding: EdgeInsets.all(kDefaultPadding * .75),

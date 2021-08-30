@@ -1,12 +1,15 @@
 import 'package:flutter/cupertino.dart';
+
 import 'package:get/get_state_manager/get_state_manager.dart';
+
 
 class QuestionController extends GetxController
     with SingleGetTickerProviderMixin {
   AnimationController? _animationController;
   Animation? _animation;
-
+  // Animation? animationTime;
   Animation? get animation => this._animation;
+
 
   @override
   void onInit() {
